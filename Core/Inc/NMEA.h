@@ -3,6 +3,9 @@
  *
  *  Created on: Nov 7, 2025
  *      Author: manas
+ *
+ * Contains the function to parse the NMEA string given as output by the GPS module and extract
+ * relevant data fields.
  */
 
 #ifndef INC_NMEA_H_
@@ -20,15 +23,9 @@ typedef struct{
 	float latitude;
 	float longitude;
 	float speed;
-}gps_data_t;
+}nmea_data_t;
 
 /* Extract data fields from the string. */
-void parse_NMEA_string(char nmea[], gps_data_t* gdata);
-
-/* Convert time from UTC to IST (24 hour format). */
-void convert_time(int utc, char* output);
-
-/* Convert latitude and longitude from DMM(Degrees Decimal minutes) to DD(Decimal Degrees). */
-float convert_DMM_to_DD(float dmm,char direction);
+void parse_NMEA_string(char nmea[], nmea_data_t* gdata);
 
 #endif /* INC_NMEA_H_ */
