@@ -3,6 +3,9 @@
  *
  *  Created on: 26-Dec-2025
  *      Author: manas
+ *
+ *  A driver and implementation layer for receiving NMEA strings from GPS module (NEO 6M) and processing
+ *  it for data logging.
  */
 
 #ifndef INC_GPS_H_
